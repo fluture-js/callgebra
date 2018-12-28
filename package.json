@@ -1,0 +1,32 @@
+{
+  "name": "callgebra",
+  "version": "0.0.0",
+  "description": "The little algebra of callbacks",
+  "main": "index",
+  "module": "index.mjs",
+  "scripts": {
+    "build": "rollup -c rollup.config.mjs",
+    "release": "xyz --edit --script scripts/prerelease --increment",
+    "test": "node --experimental-modules --no-warnings ./test/index.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fluture/callgebra.git"
+  },
+  "files": [
+    "/index.js",
+    "/index.mjs",
+    "/LICENSE",
+    "/package.json",
+    "/README.md"
+  ],
+  "author": "Aldwin Vlasblom <aldwin@avaq.it> (https://github.com/Avaq)",
+  "license": "MIT",
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {
+    "rollup": "^0.66.0",
+    "transcribe": "^1.1.1",
+    "xyz": "^3.0.0"
+  }
+}

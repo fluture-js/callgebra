@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -eufo pipefail
+npm out --long
+npm run build
+transcribe --url 'https://github.com/fluture-js/callgebra/blob/master/{filename}#L{line}' index.mjs > README.md
+git add README.md index.js
