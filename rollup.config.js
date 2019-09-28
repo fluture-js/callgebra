@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   input: 'index.mjs',
   output: {
     format: 'umd',

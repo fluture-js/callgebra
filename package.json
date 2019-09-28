@@ -2,10 +2,11 @@
   "name": "callgebra",
   "version": "1.0.0",
   "description": "The little algebra of callbacks",
-  "main": "index",
+  "type": "commonjs",
+  "main": "index.mjs",
   "module": "index.mjs",
   "scripts": {
-    "build": "rollup -c rollup.config.mjs",
+    "build": "rollup -c rollup.config.js",
     "release": "xyz --edit --script scripts/prerelease --increment",
     "test": "node --experimental-modules --no-warnings ./test/index.mjs"
   },
