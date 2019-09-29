@@ -1,9 +1,9 @@
-module.exports = {
-  input: 'index.mjs',
+export default {
+  input: 'index.js',
   output: {
     format: 'umd',
     name: 'callgebra',
-    file: 'index.js',
+    file: 'index.cjs',
     interop: false
   }
 };

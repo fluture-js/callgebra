@@ -2,9 +2,9 @@
   "name": "callgebra",
   "version": "1.0.0",
   "description": "The little algebra of callbacks",
-  "type": "commonjs",
-  "main": "index.mjs",
-  "module": "index.mjs",
+  "type": "module",
+  "main": "index.cjs",
+  "module": "index.js",
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "release": "xyz --edit --script scripts/prerelease --increment",
@@ -15,8 +15,8 @@
     "url": "git://github.com/fluture/callgebra.git"
   },
   "files": [
+    "/index.cjs",
     "/index.js",
-    "/index.mjs",
     "/LICENSE",
     "/package.json",
     "/README.md"

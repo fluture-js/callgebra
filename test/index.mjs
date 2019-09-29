@@ -1,5 +1,5 @@
 import {deepStrictEqual} from 'assert';
-import {of, chain, map, ap, callback} from '../index.mjs';
+import {of, chain, map, ap, callback} from '../index.js';
 import test from 'oletus';
 
 function id (x) {
