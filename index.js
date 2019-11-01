@@ -7,6 +7,20 @@
 //. This package exports functions for composing callbacks. You can read
 //. about the idea in my [Medium post about composable callbacks][1].
 //.
+//. ## Usage
+//.
+//. ```console
+//. $ npm install callgebra
+//. ```
+//.
+//. ```js
+//. const {chain} = require ('callgebra')
+//. ```
+//.
+//. ```js
+//. import {chain} from 'callgebra/index.js'
+//. ```
+//.
 //. ## API
 //.
 //. ```hs

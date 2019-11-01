@@ -2,20 +2,21 @@
   "name": "callgebra",
   "version": "1.0.0",
   "description": "The little algebra of callbacks",
-  "main": "index",
-  "module": "index.mjs",
+  "type": "module",
+  "main": "index.cjs",
+  "module": "index.js",
   "scripts": {
-    "build": "rollup -c rollup.config.mjs",
+    "build": "rollup -c rollup.config.js",
     "release": "xyz --edit --script scripts/prerelease --increment",
-    "test": "node --experimental-modules --no-warnings ./test/index.mjs"
+    "test": "c8 --check-coverage --branches 100 --functions 100 --lines 100 --statements 100 node --experimental-modules --no-warnings ./node_modules/.bin/oletus"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/fluture/callgebra.git"
   },
   "files": [
+    "/index.cjs",
     "/index.js",
-    "/index.mjs",
     "/LICENSE",
     "/package.json",
     "/README.md"
@@ -25,6 +26,8 @@
   "dependencies": {},
   "peerDependencies": {},
   "devDependencies": {
+    "c8": "^5.0.4",
+    "oletus": "^2.0.0",
     "rollup": "^1.1.2",
     "transcribe": "^1.1.1",
     "xyz": "^3.0.0"
