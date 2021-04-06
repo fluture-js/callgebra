@@ -9,16 +9,40 @@
 //.
 //. ## Usage
 //.
+//. ### Node
+//.
 //. ```console
-//. $ npm install callgebra
+//. $ npm install --save callgebra
 //. ```
 //.
-//. ```js
-//. const {chain} = require ('callgebra')
-//. ```
+//. On Node 12 and up, this module can be loaded directly with `import` or
+//. `require`. On Node versions below 12, `require` or the [esm][]-loader can
+//. be used.
 //.
 //. ```js
-//. import {chain} from 'callgebra/index.js'
+//. import {of, callback} from 'callgebra';
+//. callback (console.log) (of (42));
+//. ```
+//.
+//. ### Deno and Modern Browsers
+//.
+//. You can load the EcmaScript module from various content delivery networks:
+//.
+//. - [Skypack](https://cdn.skypack.dev/callgebra@0.0.0)
+//. - [JSPM](https://jspm.dev/callgebra@0.0.0)
+//. - [jsDelivr](https://cdn.jsdelivr.net/npm/callgebra@0.0.0/+esm)
+//.
+//. ### Old Browsers and Code Pens
+//.
+//. There's a [UMD][] file included in the NPM package, also available via
+//. jsDelivr: https://cdn.jsdelivr.net/npm/callgebra@0.0.0/dist/umd.js
+//.
+//. This file adds `flutureProject` to the global scope, or use CommonJS/AMD
+//. when available.
+//.
+//. ```js
+//. const {of, callback} = require ('callgebra');
+//. callback (console.log) (of (42));
 //. ```
 //.
 //. ## API
@@ -57,3 +81,5 @@ export const ap = mf => mx => chain (f => map (f) (mx)) (mf);
 export const callback = thrush;
 
 //. [1]: https://medium.com/@avaq/composable-callbacks-81c84f0324
+//. [esm]: https://github.com/standard-things/esm
+//. [UMD]: https://github.com/umdjs/umd

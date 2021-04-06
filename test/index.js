@@ -2,16 +2,16 @@ import {deepStrictEqual} from 'assert';
 import {of, chain, map, ap, callback} from '../index.js';
 import test from 'oletus';
 
-function id (x) {
+function id(x) {
   return x;
 }
 
-function inc (x) {
+function inc(x) {
   return x + 1;
 }
 
-function eq (actual) {
-  return function eqq (expected) {
+function eq(actual) {
+  return function eqq(expected) {
     deepStrictEqual (actual, expected);
   };
 }
